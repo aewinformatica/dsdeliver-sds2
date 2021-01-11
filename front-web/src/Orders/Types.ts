@@ -1,3 +1,5 @@
+import { type } from "os"
+
 export type Product =
 {
   id: number;
@@ -12,3 +14,12 @@ export type OrderLocationData = {
   longitude: number;
   address: string;
 }
+
+type ProductId = {
+  id: number;
+}
+
+//mesclando-merge
+export type orderPayload = {
+  products : ProductId[];
+} & OrderLocationData;
