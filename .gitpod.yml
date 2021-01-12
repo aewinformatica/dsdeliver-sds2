@@ -1,0 +1,4 @@
+tasks:
+  - before: cd ./front-mobile
+    init:  npm install yarn add expo-cli 
+    command: yarn start --tunnel
