@@ -15,7 +15,7 @@ export default function Header() {
     <TouchableWithoutFeedback  onPress={handleOnPress}>
     <View style={styles.container}>
       <Image source={require('../assets/logo.png')} />
-      <Text style= {styles.text}>DS Delivery</Text>
+      <Text style= {styles.text}>Aew Delivery</Text>
     </View>
     </TouchableWithoutFeedback>
   );

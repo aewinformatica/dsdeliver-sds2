@@ -6,6 +6,7 @@ import { fetchOrders } from '../api';
 import Header from '../Header';
 import OrderCard from '../OrderCard';
 import { Order } from '../types';
+import Load from '../Load';
 
 export default function Orders() {
 
@@ -36,21 +37,18 @@ export default function Orders() {
   };
 
   return (
+    isLoading ? <Load/> :
     <>
       <Header />
-      <ScrollView style={styles.container}>
-        {isLoading?(
-          <Text>Buscando Pedidos...</Text>
-        ) : (
-          orders.map(order =>(
+      <ScrollView style={styles.container}> 
+        { orders.map(order =>(
           <TouchableWithoutFeedback
            key={order.id} 
            onPress={()=>handleOnPress(order)}>
              <OrderCard order={order}/>
           </TouchableWithoutFeedback>
-        )))}
-       
-
+        ))}
+      
       </ScrollView>
     </>
 
