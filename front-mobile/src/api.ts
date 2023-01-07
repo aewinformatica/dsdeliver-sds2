@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL= 'https://api-sds-deliver.herokuapp.com';
+const API_URL= 'http://192.168.3.101:8080';
 
 
 export function fetchOrders(){

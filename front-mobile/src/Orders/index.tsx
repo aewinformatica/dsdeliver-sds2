@@ -19,7 +19,10 @@ export default function Orders() {
     setIsLoading(true);
     fetchOrders()
     .then(response =>setOrders(response.data))
-    .catch(error => Alert.alert('Houve um erro ao buscar os pedidos'))
+    .catch(error => {
+      Alert.alert('Houve um erro ao buscar os pedidos');
+      console.error(JSON.stringify(error))
+    })
     .finally(()=>setIsLoading(false))
   }
   useEffect(()=>{
