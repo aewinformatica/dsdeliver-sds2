@@ -9,7 +9,7 @@ services:
     depends_on:
       - postgres_service
     ports:
-      - 80:8080
+      - 8443:8443
     environment:
       - PROFILE=${profile}
       - DATABASE_URL=jdbc:postgresql://db_demo_container:5432/postgres?user=postgres&password=testeabc
